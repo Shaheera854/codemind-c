@@ -3,29 +3,28 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    int arr[n],i,t=0;
+    int a[n],i,t=0;
     for(i=0;i<n;i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
     for(i=0;i<n;i++)
     {
-        if(arr[i]%2!=0)
+        if(a[i]%2!=0)
         {
-            if(i%2!=0)
+            if(i%2==0)
             {
-                t++;
-            }
-            else
-            {
-                printf("False");
-                t=0;
+                t=1;
                 break;
             }
         }
     }
-    if(t>0)
+    if(t==0)
     {
         printf("True");
+    }
+    else
+    {
+        printf("False");
     }
 }
